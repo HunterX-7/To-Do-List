@@ -3,13 +3,13 @@
 }
 
 body {
-  background-color: bisque;
+  background-color: #f6f6f6;
   margin-top: 40px;
 }
 
 body::before {
   content: "XS";
-  color: red;
+  color: transparent;
   font-size: 2rem;
   font-weight: bold;
   position: fixed;
@@ -55,8 +55,8 @@ p {
 }
 
 .box {
-  background-color: lightblue;
-  border: 1px solid blue;
+  background-color: transparent;
+  border: 1px solid transparent;
   min-height: 50px;
   font-size: 2rem;
 }
