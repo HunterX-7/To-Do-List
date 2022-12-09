@@ -1,24 +1,6 @@
 import './style.css';
 
-const toDoTask = [
-  {
-    description: 'Finish Carry Overs',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Go for a 15 min walk',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'Finish this week project',
-    completed: false,
-    index: 2,
-  },
-];
-
-const todos = [];
+let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 // Elements
 
@@ -33,6 +15,7 @@ form.addEventListener('submit', (e) => {
 
   addToDo();
   displayToDo();
+  localStorage.setItem('todos', JSON.stringify(todos));
 });
 
 // Add to Do
@@ -84,19 +67,15 @@ table.addEventListener('click', (e) => {
   // target
   const { attribute } = target.dataset;
   console.log(todoId, attribute);
+
+  // attribute === "edit" && editToDo(todoId);
+  if (attribute === 'remove' && removeToDo(todoId));
 });
 
-const displayList = () => {
-  for (let i = 0; i < toDoTask.length; i += 1) {
-    const row = document.createElement('tr');
-    row.innerHTML = `
-      <td>
-        <p><span>${toDoTask[i].completed} |</span> ${toDoTask[i].description}</p>
-      </td>
-      <td class="iAlign">${toDoTask[i].index}</td>
-    `;
-    table.appendChild(row);
-  }
-};
+function removeToDo(todoId) {
+  todos = todos.filter((todo, index) => index !== todoId);
+  displayToDo();
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
 
-window.addEventListener('load', displayList);
+window.addEventListener('load', displayToDo);
