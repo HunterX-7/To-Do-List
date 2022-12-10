@@ -26,7 +26,7 @@ p {
 }
 
 .highlight {
-  background-color: #FFFFE0;
+  background-color: #ffffe0;
 }
 
 .table > :not(caption) > * > * {
@@ -82,34 +82,4 @@ p {
   border: 1px solid transparent;
   min-height: 50px;
   font-size: 2rem;
-}
-
-@media (min-width: 576px) {
-  body::before {
-    content: "SM";
-  }
-}
-
-@media (min-width: 768px) {
-  body::before {
-    content: "MD";
-  }
-}
-
-@media (min-width: 992px) {
-  body::before {
-    content: "LG";
-  }
-}
-
-@media (min-width: 1200px) {
-  body::before {
-    content: "XL";
-  }
-}
-
-@media (min-width: 1400px) {
-  body::before {
-    content: "XXL";
-  }
 }
