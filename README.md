@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./images/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./images/toToListLogo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h2><b>To-Do-List</b></h2>
@@ -85,6 +85,15 @@ The following test will run automatically as you try to pull request: -Lighthous
 - GitHub: [@HunterX-7](https://github.com/HunterX-7)
 - Twitter: [@franquin07](https://twitter.com/franquin07)
 - LinkedIn: [Francisco Quintero](https://www.linkedin.com/in/francisco-quintero-146423252/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Coming soon.
+
+- [ ] **[Add event listener to the checkbox (`change`).]**
+- [ ] **[Update items object's value for `completed` key upon user actions.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
