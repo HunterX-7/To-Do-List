@@ -23,13 +23,12 @@ form.addEventListener('submit', (e) => {
 function addToDo() {
   const task = addToList.value;
   const num = 0;
-  const tasks = {
+
+  todos.push({
     description: task,
     completed: false,
     index: num,
-  };
-
-  todos.push(tasks);
+  });
   addToList.value = '';
   console.log(todos);
 }
@@ -43,8 +42,8 @@ function displayToDo() {
         <tr class="todo" id="${index}">
           <td>
               <p>
-              <i class="${todo.completed ? 'fa-regular fa-square-check' : 'fa-regular fa-square'}" data-attribute="check"></i> 
-              <span data-attribute="edit">${todo.description}</span>
+              <i class="${todo.completed ? 'fa-regular fa-square-check' : 'fa-regular fa-square'}" data-attribute="check"></i>
+              <input id="edit${index}" type="text" class="edit" value="${todo.description}" readonly data-attribute="edit">
               </p>
           </td>
           <td class="iAlign"><span><i class="fa-solid fa-trash" data-attribute="remove"></i></span></td>
@@ -68,9 +67,27 @@ table.addEventListener('click', (e) => {
   const { attribute } = target.dataset;
   console.log(todoId, attribute);
 
-  // attribute === "edit" && editToDo(todoId);
+  attribute === "edit" && editToDo(todoId);
   if (attribute === 'remove' && removeToDo(todoId));
 });
+
+function editToDo(todoId) {
+  const row = document.getElementById(todoId);
+  const input = document.getElementById(`edit${todoId}`);
+  row.classList.add('highlight');
+  input.removeAttribute('readonly');
+  input.focus();
+  input.addEventListener('blur', (e) => {
+    row.classList.remove('highlight')
+    input.setAttribute('readonly', true);
+    todos[todoId].description = input.value;
+    console.log(input.value)
+    displayToDo();
+    localStorage.setItem('todos', JSON.stringify(todos));
+  })
+  console.log(input.value)
+  console.log(todos[todoId].description)
+}
 
 function removeToDo(todoId) {
   todos = todos.filter((todo, index) => index !== todoId);

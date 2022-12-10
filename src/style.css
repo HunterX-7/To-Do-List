@@ -17,8 +17,16 @@ body::before {
   right: 0;
 }
 
+input {
+  background-color: transparent;
+}
+
 p {
   margin: 0;
+}
+
+.highlight {
+  background-color: #FFFFE0;
 }
 
 .table > :not(caption) > * > * {
