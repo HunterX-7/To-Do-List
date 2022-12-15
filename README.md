@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./images/toToList.png" alt="logo" width="140"  height="auto" />
+  <img src="./images/toDoList.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h2><b>To-Do-List</b></h2>
