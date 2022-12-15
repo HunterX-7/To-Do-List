@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./images/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./images/toDoList.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h2><b>To-Do-List</b></h2>
@@ -46,7 +46,8 @@
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](#)
+Coming soon
+Live Demo Link
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,6 +62,14 @@ To get a local copy up and running follow these steps:
 2. Clone the repository or download the Zip folder:
 
     **``git clone https://github.com/HunterX-7/To-Do-List.git``**
+
+3. Install all the necessary dependencies with the following command on your terminal of the clone repo:
+
+    **``npm install``**
+
+4. Open the webpack-dev-server to check the pogram running with:
+
+    **``npm start``**
 
 ### Prerequisites
 
@@ -85,6 +94,16 @@ The following test will run automatically as you try to pull request: -Lighthous
 - GitHub: [@HunterX-7](https://github.com/HunterX-7)
 - Twitter: [@franquin07](https://twitter.com/franquin07)
 - LinkedIn: [Francisco Quintero](https://www.linkedin.com/in/francisco-quintero-146423252/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Coming soon.
+
+- [ ] **[Add event listener to the checkbox (`change`).]**
+- [ ] **[Update items object's value for `completed` key upon user actions.]**
+- [ ] **[Implement a function for the "Clear all completed" button (use `filter()` method).]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -17,8 +17,16 @@ body::before {
   right: 0;
 }
 
+input {
+  background-color: transparent;
+}
+
 p {
   margin: 0;
+}
+
+.highlight {
+  background-color: #ffffe0;
 }
 
 .table > :not(caption) > * > * {
@@ -52,6 +60,21 @@ p {
 .form-control:focus {
   border-color: transparent;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 8px rgba(255, 0, 0, 0);
+}
+
+.check {
+  text-decoration: line-through;
+  color: #a9a9ac;
+}
+
+.edit {
+  border: 0;
+}
+
+.edit:focus {
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
 }
 
 .box {
