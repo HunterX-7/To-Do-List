@@ -46,6 +46,28 @@ function displayToDo() {
   });
 }
 
+// Check To Do
+
+function checkToDo(todoId) {
+  todos = todos.map((todo, index) => {
+    if (index === todoId) {
+      return {
+        description: todo.description,
+        completed: !todo.completed,
+        index: todo.index,
+      };
+    }
+
+    return {
+      description: todo.description,
+      completed: todo.completed,
+      index: todo.index,
+    };
+  });
+  displayToDo();
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
+
 // Edit To Do List
 
 function editToDo(todoId) {
@@ -86,6 +108,7 @@ table.addEventListener('click', (e) => {
   // target
   const { attribute } = target.dataset;
 
+  if (attribute === 'check' && checkToDo(todoId));
   if (attribute === 'edit' && editToDo(todoId));
   if (attribute === 'remove' && removeToDo(todoId));
 });
