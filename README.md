@@ -46,7 +46,8 @@
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo Link](#)
+Coming soon
+Live Demo Link
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,6 +62,14 @@ To get a local copy up and running follow these steps:
 2. Clone the repository or download the Zip folder:
 
     **``git clone https://github.com/HunterX-7/To-Do-List.git``**
+
+3. Install all the necessary dependencies with the following command on your terminal of the clone repo:
+
+    **``npm install``**
+
+4. Open the webpack-dev-server to check the pogram running with:
+
+    **``npm start``**
 
 ### Prerequisites
 

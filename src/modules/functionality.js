@@ -14,7 +14,7 @@ function addToDo() {
   todos.push({
     description: task,
     completed: false,
-    index: todos.length,
+    index: todos.length + 1,
   });
   addToList.value = '';
 }
@@ -23,7 +23,7 @@ function addToDo() {
 
 function updateToDo() {
   for (let i = 0; i < todos.length; i += 1) {
-    todos[i].index = i;
+    todos[i].index = i + 1;
   }
 }
 
