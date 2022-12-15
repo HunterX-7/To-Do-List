@@ -1,4 +1,6 @@
-let todos = JSON.parse(localStorage.getItem('todos')) || [];
+import checkToDo from './interactive.js';
+
+export let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
 // Elements
 
@@ -44,28 +46,6 @@ function displayToDo() {
         </tr>
     `;
   });
-}
-
-// Check To Do
-
-function checkToDo(todoId) {
-  todos = todos.map((todo, index) => {
-    if (index === todoId) {
-      return {
-        description: todo.description,
-        completed: !todo.completed,
-        index: todo.index,
-      };
-    }
-
-    return {
-      description: todo.description,
-      completed: todo.completed,
-      index: todo.index,
-    };
-  });
-  displayToDo();
-  localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 // Edit To Do List
