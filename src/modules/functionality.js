@@ -9,7 +9,7 @@ const button = document.getElementById('btn');
 
 // Add To Do
 
-function addToDo() {
+const addToDo = () => {
   const task = addToList.value;
 
   todos.push({
@@ -18,19 +18,19 @@ function addToDo() {
     index: todos.length + 1,
   });
   addToList.value = '';
-}
+};
 
 // Update To Do List
 
-function updateToDo() {
+const updateToDo = () => {
   for (let i = 0; i < todos.length; i += 1) {
     todos[i].index = i + 1;
   }
-}
+};
 
 // Display To Do List
 
-function displayToDo() {
+const displayToDo = () => {
   table.innerHTML = '';
   todos.forEach((todo, index) => {
     table.innerHTML += `
@@ -45,11 +45,11 @@ function displayToDo() {
         </tr>
     `;
   });
-}
+};
 
 // Check To Do
 
-function checkToDo(todoId) {
+const checkToDo = (todoId) => {
   todos = todos.map((todo, index) => {
     if (index === todoId) {
       return {
@@ -67,11 +67,11 @@ function checkToDo(todoId) {
   });
   displayToDo();
   localStorage.setItem('todos', JSON.stringify(todos));
-}
+};
 
 // Edit To Do List
 
-function editToDo(todoId) {
+const editToDo = (todoId) => {
   const row = document.getElementById(todoId);
   const input = document.getElementById(`edit${todoId}`);
   row.classList.add('highlight');
@@ -84,25 +84,24 @@ function editToDo(todoId) {
     displayToDo();
     localStorage.setItem('todos', JSON.stringify(todos));
   });
-}
+};
 
 // Remove To Do
 
-function removeToDo(todoId) {
+const removeToDo = (todoId) => {
   todos = todos.filter((todo, index) => index !== todoId);
   updateToDo();
   displayToDo();
   localStorage.setItem('todos', JSON.stringify(todos));
-}
+};
 
 // Clear all
 
-button.addEventListener('click', (e) => {
+button.addEventListener('click', () => {
   todos = todos.filter((todo) => todo.completed === false);
   updateToDo();
   displayToDo();
   localStorage.setItem('todos', JSON.stringify(todos));
-  console.log(todos);
 });
 
 // Event Listeners
