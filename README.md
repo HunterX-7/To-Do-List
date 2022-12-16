@@ -46,8 +46,7 @@
 
 ### 🚀 Live Demo <a name="live-demo"></a>
 
-Coming soon
-Live Demo Link
+[Live Demo Link](https://hunterx-7.github.io/To-Do-List/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,7 +100,6 @@ The following test will run automatically as you try to pull request: -Lighthous
 
 > Coming soon.
 
-- [ ] **[Deploy the project using GitHub-pages]**
 - [ ] **[Add event listeners to list items (`dragstart`, `dragover`, `drop`).]**
 - [ ] **[Update items object's values for `index` key upon user actions.]**
 
