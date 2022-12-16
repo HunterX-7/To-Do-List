@@ -101,9 +101,9 @@ The following test will run automatically as you try to pull request: -Lighthous
 
 > Coming soon.
 
-- [ ] **[Add event listener to the checkbox (`change`).]**
-- [ ] **[Update items object's value for `completed` key upon user actions.]**
-- [ ] **[Implement a function for the "Clear all completed" button (use `filter()` method).]**
+- [ ] **[Deploy the project using GitHub-pages]**
+- [ ] **[Add event listeners to list items (`dragstart`, `dragover`, `drop`).]**
+- [ ] **[Update items object's values for `index` key upon user actions.]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
