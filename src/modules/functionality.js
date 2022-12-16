@@ -5,6 +5,7 @@ let todos = JSON.parse(localStorage.getItem('todos')) || [];
 const table = document.getElementById('table-body');
 const form = document.getElementById('toDoForm');
 const addToList = document.getElementById('addToList');
+const button = document.getElementById('btn');
 
 // Add To Do
 
@@ -93,6 +94,16 @@ function removeToDo(todoId) {
   displayToDo();
   localStorage.setItem('todos', JSON.stringify(todos));
 }
+
+// Clear all
+
+button.addEventListener('click', (e) => {
+  todos = todos.filter((todo) => todo.completed === false);
+  updateToDo();
+  displayToDo();
+  localStorage.setItem('todos', JSON.stringify(todos));
+  console.log(todos);
+});
 
 // Event Listeners
 
